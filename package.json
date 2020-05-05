@@ -1,0 +1,76 @@
+{
+  "name": "use-sx",
+  "version": "0.0.1",
+  "description": "Composable styles for React.",
+  "author": "James K Nelson <james@jamesknelson.com>",
+  "license": "MIT",
+  "main": "dist/commonjs/use-sx.js",
+  "module": "dist/es/use-sx.js",
+  "types": "dist/types/use-sx.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:commonjs": "tsc --module commonjs --outDir dist/commonjs",
+    "build:es": "tsc --module es2015 --outDir dist/es",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types --isolatedModules false",
+    "build": "yarn run clean && yarn build:es && yarn build:commonjs && yarn build:types",
+    "build:watch": "yarn run clean && yarn build:es -- --watch",
+    "prepare": "yarn build && yarn test",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesknelson/use-sx.git"
+  },
+  "keywords": [
+    "css",
+    "emotion",
+    "react",
+    "styled-components",
+    "sx"
+  ],
+  "bugs": {
+    "url": "https://github.com/jamesknelson/use-sx/issues"
+  },
+  "homepage": "https://github.com/jamesknelson/use-sx#readme",
+  "peerDependencies": {
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.3.0",
+    "@testing-library/react": "^10.0.2",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.1.5",
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.9.32",
+    "@types/styled-components": "4.1.8",
+    "csstype": "^2.6.10",
+    "jest": "^25.2.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.1.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "preset": "ts-jest",
+    "testMatch": null,
+    "globals": {
+      "ts-jest": {
+        "babelConfig": null,
+        "diagnostics": false
+      }
+    }
+  }
+}
