@@ -1,12 +1,12 @@
 {
   "name": "use-sx",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Composable styles for React.",
   "author": "James K Nelson <james@jamesknelson.com>",
   "license": "MIT",
-  "main": "dist/commonjs/use-sx.js",
-  "module": "dist/es/use-sx.js",
-  "types": "dist/types/use-sx.d.ts",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build:commonjs": "tsc --module commonjs --outDir dist/commonjs",

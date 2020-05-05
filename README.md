@@ -94,7 +94,7 @@ If you could create custom style properties, you could even compose your styled 
 </LinkControl>
 ```
 
-See this as a [live example]().
+See this as a [live example](https://codesandbox.io/s/admiring-mahavira-dvw7v?file=/src/app.js).
 
 
 How it works
