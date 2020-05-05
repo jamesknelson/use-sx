@@ -71,14 +71,16 @@ You could specified a control boundary, and nested elements would automatically 
 </ButtonControl>
 ```
 
-If you could create custom style properties, you could even compose your styled components without a care for where they'll eventually be used...
+You could compose your styled components without a care for where they'll eventually be used...
 
 ```jsx
 <LinkControl href='/start'>
   <ButtonBody sx={{
+    border: '1px solid black',
     color: {
-      default: 'gray',
-      hover: 'red',
+      default: 'black',
+      hover: 'white',
+      active: 'darkred',
     },
     margin: '8px 4px',
   }}>
@@ -87,7 +89,10 @@ If you could create custom style properties, you could even compose your styled 
       glyph={Play}
       label="Play"
       sx={{
-        color: 'white'
+        color: {
+          default: 'white',
+          hover: 'black',
+        }
       }}
     />
   </ButtonBody>
